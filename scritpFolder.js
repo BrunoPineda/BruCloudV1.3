@@ -197,7 +197,8 @@ function editarFolder(newName) {
         confirmButtonText: 'Crear',
         showLoaderOnConfirm: true,
         preConfirm: (name) => {
-            var url = "https://api-rest-brucorp1.herokuapp.com/upload/folder/" + newName + "&" + name;
+            console.log(nameFilter)
+            var url = "https://api-rest-brucorp1.herokuapp.com/upload/folder/" + nameFilter + "!" + newName + "&" + name;
 
             var xhr = new XMLHttpRequest();
             xhr.open("PUT", url);
