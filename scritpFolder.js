@@ -50,8 +50,8 @@ const cargarDatos = async(url) => {
 
     $(document).ready(function() {
         $(".formconruta").append("<form action='https://api-rest-brucorp1.herokuapp.com/upload/files/multiples/" + name.name + "' target='_blank' method='POST' enctype='multipart/form-data'>" +
-            "<input type='file' name='myFile' id='myFile' multiple>" +
-            "<input type='submit' value='SubirCUYES'>" +
+            "<input type='file' name='myFile' id='myFile' multiple required>" +
+            "<input type='submit' value='Subir'>" +
             "</form>");
 
         datos.data.forEach(function(name, i) {
